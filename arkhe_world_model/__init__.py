@@ -81,3 +81,39 @@ __all__ = [
     "KolmogorovWeightDecay",
     "print_kolmogorov_report",
 ]
+from .substrates import (
+    OctraService,
+    FHECiphertext,
+    ZKProver,
+    PQCKeyPair,
+    HypergraphOntologyBackbone,
+    CorbonePlatformMapping,
+    JuridicalNetworkExtraction,
+    QuantumProofOfWork,
+    AICapabilityHierarchy,
+    PeptideSaaSPrinciple,
+    LightclockHarmonyPrinciple,
+    KolmogorovWeightTheorem,
+)
+
+__all__.extend([
+    "OctraService",
+    "FHECiphertext",
+    "ZKProver",
+    "PQCKeyPair",
+    "HypergraphOntologyBackbone",
+    "CorbonePlatformMapping",
+    "JuridicalNetworkExtraction",
+    "QuantumProofOfWork",
+    "AICapabilityHierarchy",
+    "PeptideSaaSPrinciple",
+    "LightclockHarmonyPrinciple",
+    "KolmogorovWeightTheorem",
+])
+from .substrates import EncryptedMemoryOntologyBridge
+from .encrypted_memory import EncryptedMemoryCommit
+
+__all__.extend([
+    "EncryptedMemoryOntologyBridge",
+    "EncryptedMemoryCommit",
+])

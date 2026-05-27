@@ -128,8 +128,6 @@ class ArkheHybridLoss(nn.Module):
             self.lambda_kolmogorov * losses["kolmogorov"]
         )
 
-        if not losses["total"].requires_grad:
-            losses["total"].requires_grad_(True)
 
         return losses
 
