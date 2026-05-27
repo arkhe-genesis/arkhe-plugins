@@ -1,0 +1,8 @@
+README.md
+setup.py
+arkhe_world_model.egg-info/PKG-INFO
+arkhe_world_model.egg-info/SOURCES.txt
+arkhe_world_model.egg-info/dependency_links.txt
+arkhe_world_model.egg-info/entry_points.txt
+arkhe_world_model.egg-info/requires.txt
+arkhe_world_model.egg-info/top_level.txt

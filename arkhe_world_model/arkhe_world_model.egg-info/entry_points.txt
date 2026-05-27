@@ -1,0 +1,3 @@
+[console_scripts]
+arkhe-demo = demo:main
+arkhe-train = train:main
