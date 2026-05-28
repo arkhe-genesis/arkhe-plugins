@@ -1,0 +1,10 @@
+[plugin]
+name = "permaweb-bridge"
+version = "2.0.0"
+description = "PERMAWEB-BRIDGE Substrate 927 — Arweave/AO/Permaweb Bridge for ARKHE-OS Omni-Agent."
+author = "ORCID 0009-0005-2697-4668"
+license = "ARKHE-CATHEDRAL-2pct"
+entry_point = "permaweb_bridge"
+dependencies = ["requests", "arweave-python-client"]
+arkhe_version = "2.0.0"
+substrate_id = "927"
