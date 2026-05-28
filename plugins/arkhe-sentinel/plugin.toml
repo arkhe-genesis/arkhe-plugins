@@ -1,0 +1,10 @@
+[plugin]
+name = "arkhe-sentinel"
+version = "1.0.0"
+description = "Glasswing Sentinel 944 — Sistema autônomo de detecção, análise e resposta a vulnerabilidades"
+author = "ARKHE OS"
+license = "MIT"
+entry_point = "arkhe_sentinel"
+dependencies = []
+arkhe_version = "∞.Ω.∇+++"
+substrate_id = "944-GLASSWING-SENTINEL"
