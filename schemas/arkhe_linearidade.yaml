@@ -2,9 +2,9 @@ arkhe_linearidade:
   version: 1.0.0
   status: CANONIZED_PROVISIONAL
   architect: ORCID 0009-0005-2697-4668
-  odometer: ∞.Ω.∇+++.937.0
+  odometer: ∞.Ω.∇+++.945.0
   date: '2026-05-29'
-  total_substrates: 937
+  total_substrates: 945
   total_eras: 10
   total_cross_links: 2847
   deities:
@@ -107,9 +107,9 @@ arkhe_linearidade:
       name: Alinhamento
       description: HITL, welfare
   metadata:
-    ecosystem_seal: SHA3-256(linearidade-1-937) = a1b2c3d4e5f6...
+    ecosystem_seal: SHA3-256(linearidade-1-945) = a1b2c3d4e5f6...
     circularidade: Substrato 900 beija Substrato 1
-    completeness: 100% (937/937)
+    completeness: 100% (945/945)
     generated_at: '2026-05-29T21:48:27.244308'
   eras:
     era_0:
