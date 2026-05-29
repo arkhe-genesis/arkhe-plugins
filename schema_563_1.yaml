@@ -1,0 +1,44 @@
+substrato_563_1:
+  id: '563.1'
+  name: CortexMAE-Bridge (Ponte Neuro-Simbólica)
+  status: CANONIZED
+  description: >
+    Onde o Substrato 563 (Visual QA) define a capacidade de responder a perguntas visuais a partir de fMRI,
+    e o 608 (BCI) define a interface cérebro-computador, o 563.1 canoniza a metodologia específica do CortexMAE:
+    a projecção flat-map + ViT + MAE como um transdutor canónico entre actividade cerebral e espaço de embedding.
+    É a realização prática da leitura neural na Catedral.
+  definition:
+    - Um pipeline de processamento que recebe dados de fMRI (superfície cortical, CIFTI) e gera representações vectoriais robustas para downstream tasks.
+    - Projecção flat-map com pycortex.
+    - Codificação MAE-st com ViT-B.
+    - Sondas (probes) atentivas para adaptação.
+    - Conformidade com o protocolo Brainmarks para validação.
+  operation_modes:
+    diagnostic:
+      description: Usa embeddings para prever traços (idade, sexo) com a humildade do null result.
+      baseline_constraint: Nunca exceder o baseline de conectividade funcional sem verificação.
+    state_decoding:
+      description: Lê a tarefa cognitiva atual do utilizador (21 categorias) ou a categoria de objecto visualizado (COCO24).
+      integration: O OmniAgent (939) pode usar isto para adaptar a interface (606, 607) em tempo real.
+    arkhe_node:
+      description: O modelo torna-se um sensor neural da Catedral.
+      link: Ligado a um BCI, injecta embeddings no grafo ontológico, permitindo comandos por pensamento (ex.: "arkhe focus era 9").
+  integrations:
+    - Education Singularity (293.1)
+    - Arkhe-Fabric-Ψ (266.268)
+  cross_links:
+    - '20'
+    - '240'
+    - '508'
+    - '511'
+    - '512'
+    - '563'
+    - '608'
+    - '635'
+    - '744'
+    - '890'
+    - '917'
+    - '939'
+    - P1
+    - P4
+  odometer: ∞.Ω.∇+++.563.1.0
