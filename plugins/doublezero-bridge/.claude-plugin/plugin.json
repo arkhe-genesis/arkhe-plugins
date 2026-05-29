@@ -1,0 +1,7 @@
+{
+  "name": "doublezero-bridge",
+  "version": "1.0.0",
+  "description": "DoubleZero Network Bridge for high performance cross-substrate communication",
+  "type": "internal",
+  "entrypoint": "doublezero_bridge.py"
+}
