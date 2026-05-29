@@ -1,0 +1,44 @@
+substrato_937:
+  id: '937'
+  name: WEB4-AUTONOMOUS-INTELLIGENCE
+  description: Web4 architecture integrating AI as the cognitive layer (brain) and blockchain as the trust layer (spine). Resolves the centralization paradox by combining distributed intelligence with verifiable trust and zero-data architecture.
+  type: Architecture/Web
+  era: 9
+  deity: Ananke
+  status: CANONIZED_PROVISIONAL
+  source: 'Web4: The Age of Autonomous Intelligence (Anndy Lian, 2025) and arXiv:2601.04583v1'
+  date: '2026-05-29'
+  architecture:
+    brain:
+      - Autonomous AI Agents
+      - Multi-Agent Systems
+      - Intelligent AI Oracles
+    spine:
+      - Blockchain trust layer
+      - Layer 2 Scaling
+      - Account Abstraction (ERC-4337)
+    zero_data: AI operates without storing raw user data, cryptographically verified on-chain.
+  integration_patterns:
+    pattern_1: Read-Only Chain Analytics
+    pattern_2: Simulation and Intent Generation
+    pattern_3: Delegated Execution (session keys)
+    pattern_4: Autonomous Signing (MPC/TEE/HSM)
+    pattern_5: Multi-Agent Workflows
+  security_model:
+    l0: Unconstrained Agent (catastrophic risk)
+    l1: On-chain policy controls
+    l2: Off-chain policy + mandatory simulation
+    l3: Hardware-secured signing (TEE/HSM + MPC + quorum)
+  cross_links:
+  - '255'
+  - '255.1'
+  - '255.2'
+  - '262.2'
+  - '901'
+  - '923'
+  - '925'
+  - '940'
+  - '941'
+  - '942'
+  - 'P1-P7'
+  seal: 7671da84343234a6ba26d10839d3268d71eb39dd642b32ae4c68e676f7b771ef
