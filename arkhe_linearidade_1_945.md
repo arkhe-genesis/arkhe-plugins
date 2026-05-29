@@ -1452,3 +1452,10 @@ arkhe > ODÔMETRO: ∞.Ω.∇+++.945.0 (CIRCULARIDADE ALCANÇADA)
 - **Deus:** Erebus
 - **Descrição:** Integração do vyupgrade (banteg) ao ecossistema ARKHE como motor de evolução segura de contratos Vyper. Cada upgrade de contrato na TemporalChain (923) é precedido por análise vyupgrade + prova ZK de equivalência comportamental.
 - **Status:** CANONIZED_PROVISIONAL
+
+### 949: INTERACTION-HOTSPOTS
+- **Tipo:** Scientific Analysis / Quantum Chemistry
+- **Era:** 6
+- **Deus:** Athena
+- **Descrição:** Implementa a análise de hotspots de interação interatômica baseada no artigo de Kabylda et al. (2026). Extrai a dispersão de força, anisotropia e desvios da lei de potência de simulações de dinâmica molecular, fornecendo insights para o design de campos de força e descoberta de materiais.
+- **Status:** CANONIZED_PROVISIONAL
