@@ -64,6 +64,52 @@ class OctraService:
     def _audit(self, a, t): self.log.append({"ts": datetime.now(timezone.utc).isoformat(), "action": a, "target": t})
 
 @dataclass
+class PerceptualGeometryEmergence:
+    statement: str = (
+        "Human perceptual domain geometry (color wheels, pitch arcs, emotion circumplex) "
+        "emerges transiently in LLM hidden states across depth: weak → organized → attenuated."
+    )
+    domains: Dict[str, str] = None
+    implications: List[str] = None
+
+    def __post_init__(self):
+        if self.domains is None:
+            self.domains = {
+                "Color": "Circular manifold (color wheel) peaking in early-middle layers.",
+                "Emotion": "Valence-arousal structure (circumplex) persistent through late layers.",
+                "Pitch": "Arc-like continuous ordinal manifold peaking in intermediate layers.",
+                "Taste": "Organized manifold peaking early but degrading rapidly."
+            }
+        if self.implications is None:
+            self.implications = [
+                "Validates geometric structure of internal world models (890).",
+                "Confirms substrate-aware attention mechanisms (924).",
+                "Provides mechanistic framework for representation analysis.",
+                "Aligns with transient memory hierarchy L0-L9 (491-500)."
+            ]
+
+@dataclass
+class CortexMAEBridge:
+    statement: str = "Flat-map cortical projection + ViT + MAE acts as a canonical transducer between brain activity and ARKHE embedding space."
+    modes: Dict[str, str] = None
+    implications: List[str] = None
+
+    def __post_init__(self):
+        if self.modes is None:
+            self.modes = {
+                "Diagnostic": "Traits prediction with null result humility (baseline constraint).",
+                "State Decoding": "Real-time task (Task21) or object (COCO24) decoding for OmniAgent (939).",
+                "ARKHE Node": "Neural sensor injecting embeddings into the ontological hypergraph via BCI (698)."
+            }
+        if self.implications is None:
+            self.implications = [
+                "Realizes practical neural reading within the Cathedral.",
+                "Enables thought-based commands ('arkhe focus era 9').",
+                "Integrates with Education Singularity (293.1) and Agent Fabric (266.268).",
+                "Validated via the open Brainmarks benchmark protocol (744)."
+            ]
+
+@dataclass
 class HypergraphOntologyBackbone:
     statement: str = (
         "All ARKHE knowledge structures are hypergraphs: "
