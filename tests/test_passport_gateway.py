@@ -9,6 +9,8 @@ import pytest
 from unittest.mock import AsyncMock
 from aiohttp import ClientSession
 
+import sys
+sys.path.insert(0, ".")
 from node.passport_gateway import (
     PassportGateway,
     PassportGatewayError,
@@ -43,19 +45,21 @@ def mock_session():
 
 from unittest.mock import MagicMock
 
+class MockContextManager:
+    def __init__(self, resp):
+        self.resp = resp
+    async def __aenter__(self):
+        return self.resp
+    async def __aexit__(self, *args):
+        pass
+
 def make_mock_response(status, json_data):
     """Cria um mock de resposta aiohttp."""
-    mock_resp = AsyncMock()
+    mock_resp = MagicMock()
     mock_resp.status = status
     mock_resp.json = AsyncMock(return_value=json_data)
-    mock_resp.__aenter__ = AsyncMock(return_value=mock_resp)
-    mock_resp.__aexit__ = AsyncMock(return_value=False)
-
-    # Context manager implementation for session.get() which is what is returned
-    ctx_mgr = MagicMock()
-    ctx_mgr.__aenter__ = AsyncMock(return_value=mock_resp)
-    ctx_mgr.__aexit__ = AsyncMock(return_value=False)
-    return ctx_mgr
+    mock_resp.text = AsyncMock(return_value="")
+    return MockContextManager(mock_resp)
 
 
 def build_credential(provider, issuance_date=None):
@@ -226,23 +230,10 @@ async def test_is_human_orcid_fallback(gateway, mock_session):
 
 @pytest.mark.asyncio
 async def test_is_human_api_error_with_orcid(gateway, mock_session):
-    # Error from passport
-    passport_ctx_mgr = MagicMock()
-    passport_mock_resp = AsyncMock()
-    passport_mock_resp.status = 500
-    passport_mock_resp.text = AsyncMock(return_value="Internal Server Error")
-    passport_ctx_mgr.__aenter__ = AsyncMock(return_value=passport_mock_resp)
-    passport_ctx_mgr.__aexit__ = AsyncMock(return_value=False)
-
-    # Success from ORCID
-    orcid_ctx_mgr = MagicMock()
-    orcid_mock_resp = AsyncMock()
-    orcid_mock_resp.status = 200
-    orcid_mock_resp.json = AsyncMock(return_value={"data": "test"})
-    orcid_ctx_mgr.__aenter__ = AsyncMock(return_value=orcid_mock_resp)
-    orcid_ctx_mgr.__aexit__ = AsyncMock(return_value=False)
-
-    mock_session.get = MagicMock(side_effect=[passport_ctx_mgr, orcid_ctx_mgr])
+    score_resp = make_mock_response(500, {})
+    score_resp.text = AsyncMock(return_value="Internal Server Error")
+    orcid_resp = make_mock_response(200, {"orcid-identifier": {"path": "0009-0005-2697-4668"}})
+    mock_session.get = MagicMock(side_effect=[score_resp, orcid_resp])
     gateway._session = mock_session
 
     proof = await gateway.is_human("0xAlice123456789", orcid_id="0009-0005-2697-4668")
@@ -379,6 +370,8 @@ def test_generate_report(gateway):
 async def test_is_human_zero_score(gateway, mock_session):
     score_resp = make_mock_response(200, {"score": "0"})
     stamps_resp = make_mock_response(200, {"items": []})
+    mock_session.get = MagicMock(side_effect=[score_resp, stamps_resp])
+    mock_session.get = MagicMock(side_effect=[score_resp, stamps_resp])
     mock_session.get = MagicMock(side_effect=[score_resp, stamps_resp])
     gateway._session = mock_session
 

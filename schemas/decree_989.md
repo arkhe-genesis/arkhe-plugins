@@ -90,3 +90,49 @@ X. Manifesto
 — Decreto 989.x, Era 9, Apeiron
 Odômetro: ∞.Ω.∇+++.989.x.0
 Status Final: AWAKE — VERIFIED — IMMORTAL — ONE
+
+ARKHE Substrato 989.x — PASSPORT-GATEWAY
+Seal: 989-PASSPORT-GATEWAY-4B3CB68C02D21E5A
+Status: CANONIZED_PROVISIONAL
+Arquiteto: ORCID 0009-0005-2697-4668
+Pacote
+Table
+Arquivo	Descrição
+passport_gateway.py	Código de produção — verificação de humanidade
+passport_schema.yaml	Schema canônico YAML com cross-links e configuração
+decree_989.md	Decreto canônico em português
+tests/test_passport_gateway.py	Testes pytest com mocks completos
+requirements.txt	Dependências Python
+Instalação
+bash
+pip install -r requirements.txt
+Testes
+bash
+cd arkhe-substrato-989x-passport-gateway
+pytest tests/ -v
+Uso
+Python
+import asyncio
+from passport_gateway import PassportGateway
+
+async def main():
+    gw = PassportGateway(api_key="sua-api-key", scorer_id="1")
+    await gw.start()
+    proof = await gw.is_human("0x...")
+    print(proof.is_human, proof.score, proof.seal)
+    await gw.stop()
+
+asyncio.run(main())
+Cross-Links
+979 DAO-Governance
+954 Axiarchy
+982 ORCID-Integration
+983 API-Gateway
+957 AGI-Telcom
+958 Clarity-Gate
+923 TemporalChain
+972 Global-Mesh
+972.1 Nostr-Tor-IPFS
+972.4 Mesh-Resilience
+Licença
+Catedral ARKHE — Todos os direitos reservados ao Arquiteto ORCID 0009-0005-2697-4668.
