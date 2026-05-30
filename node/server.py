@@ -1,5 +1,5 @@
-#!/usr/bin/env python3
 import asyncio
+import os
 from passport_gateway import PassportGateway
 from api_gateway import APIGateway
 
@@ -11,21 +11,19 @@ class ArkheNode:
         self.api = APIGateway(node_id=self.node_id, passport=self.passport)
 
     async def start(self):
-        print(f"Starting ArkheNode: {self.node_id}")
+        print(f"Starting ArkheNode {self.node_id}...")
         if self.config.get("passport_enabled", True):
             await self.passport.start()
-        await self.api.start_http_server()
+        # await self.api.start_http_server()
+        print("ArkheNode started.")
 
     async def stop(self):
-        print(f"Stopping ArkheNode: {self.node_id}")
-        if self.config.get("passport_enabled", True):
-            await self.passport.stop()
+        print(f"Stopping ArkheNode {self.node_id}...")
+        await self.passport.stop()
+        self.api.stop()
+        print("ArkheNode stopped.")
 
 if __name__ == "__main__":
-    async def run_server():
-        node = ArkheNode()
-        await node.start()
-        # Keep running
-        await asyncio.sleep(1)
-        await node.stop()
-    asyncio.run(run_server())
+    node = ArkheNode()
+    asyncio.run(node.start())
+    asyncio.run(node.stop())

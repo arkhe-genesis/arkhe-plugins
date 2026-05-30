@@ -1,7 +1,6 @@
-#!/usr/bin/env python3
 import asyncio
 import json
-from http.server import HTTPServer, BaseHTTPRequestHandler
+from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib.parse import urlparse, parse_qs
 from typing import Optional
 from passport_gateway import PassportGateway
@@ -11,17 +10,18 @@ class APIGateway:
         self.node_id = node_id
         self.queries_processed = 0
         self.passport = passport
+        self.server = None
 
-    def handle_ws_message(self, message: str):
-        self.queries_processed += 1
-        return f"Processed {message}"
+    async def handle_ws_message(self, message):
+        pass
 
     async def start_http_server(self):
-        # We need a non-blocking way to start HTTPServer but for this mock,
-        # a simple instantiation demonstrates the structure
-        server = HTTPServer(("0.0.0.0", 8080), lambda *args: APIGateway.RequestHandler(*args, gateway=self))
-        # Usually we would run server.serve_forever() in a thread or use aiohttp.web
-        print(f"API Gateway started for node {self.node_id}")
+        self.server = HTTPServer(("0.0.0.0", 8080), lambda *args: self.RequestHandler(*args, gateway=self))
+        # Run server in a thread or asyncio executor in a real app, here we just show the structure
+
+    def stop(self):
+        if self.server:
+            self.server.server_close()
 
     class RequestHandler(BaseHTTPRequestHandler):
         def __init__(self, *args, gateway=None, **kwargs):

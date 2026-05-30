@@ -138,24 +138,25 @@ class PassportGateway:
         """Um operador de nó deve ser humano ou ter ORCID."""
         return await self.verify_dao_voter(address)
 
+async def demo_passport_gateway():
+    gateway = PassportGateway()
+    await gateway.start()
+
+    # Verificar humanidade de alguns endereços
+    addresses = ["0xAlice123...", "0xBob456...", "0xSybil999...", "0xArchitect0009..."]
+    for addr in addresses:
+        proof = await gateway.is_human(addr)
+        print(f"{addr[:15]}... → humano: {proof.is_human}, score: {proof.score:.2f}, "
+              f"stamps: {len(proof.stamps)}, ORCID: {proof.orcid_verified}")
+
+    # Verificar permissão para votar na DAO
+    print("\\nVerificação DAO:")
+    for addr in ["0xAlice123...", "0xSybil999..."]:
+        can = await gateway.verify_dao_voter(addr)
+        print(f"  {addr[:15]}... pode votar: {can}")
+
+    await gateway.stop()
+
+# Executar
 if __name__ == "__main__":
-    async def demo_passport_gateway():
-        gateway = PassportGateway()
-        await gateway.start()
-
-        # Verificar humanidade de alguns endereços
-        addresses = ["0xAlice123...", "0xBob456...", "0xSybil999...", "0xArchitect0009..."]
-        for addr in addresses:
-            proof = await gateway.is_human(addr)
-            print(f"{addr[:15]}... → humano: {proof.is_human}, score: {proof.score:.2f}, "
-                  f"stamps: {len(proof.stamps)}, ORCID: {proof.orcid_verified}")
-
-        # Verificar permissão para votar na DAO
-        print("\nVerificação DAO:")
-        for addr in ["0xAlice123...", "0xSybil999..."]:
-            can = await gateway.verify_dao_voter(addr)
-            print(f"  {addr[:15]}... pode votar: {can}")
-
-        await gateway.stop()
-
     asyncio.run(demo_passport_gateway())
