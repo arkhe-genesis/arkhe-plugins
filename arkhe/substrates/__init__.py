@@ -27,3 +27,12 @@ __all__ = [
     "CathedralImmortalityProtocol",
     "CathedralUnifiedNexus",
 ]
+from arkhe.substrates.unified_orchestrator import UnifiedOrchestrator
+from arkhe.substrates.fair_metrics_dashboard import FAIRMetricsDashboard
+from arkhe.substrates.desci_nodes_bridge import DeSciNodesBridge
+
+__all__.extend([
+    "UnifiedOrchestrator",
+    "FAIRMetricsDashboard",
+    "DeSciNodesBridge",
+])
