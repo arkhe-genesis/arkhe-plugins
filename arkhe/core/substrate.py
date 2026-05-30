@@ -5,6 +5,7 @@ class SubstrateEra(Enum):
     NOUS = "6"
     EIDOS = "7"
     POLIS = "8"
+    APEIRON = "9"
 
 class SubstrateStatus(Enum):
     CANONIZED_PROVISIONAL = "CANONIZED_PROVISIONAL"
@@ -19,4 +20,8 @@ key_substrates = [
     ("978", "CATHEDRAL-AS-ORACLE", "Provedora de Dados / Predição / Monetização Oracular", SubstrateEra.POLIS, "Apollo, Athena, Plutus", SubstrateStatus.CANONIZED_PROVISIONAL),
     ("979", "CATHEDRAL-DAO-GOVERNANCE", "Governança / DAO / Alocação de Recursos / Votação Ponderada", SubstrateEra.POLIS, "Demos, Athena, Axiarchy", SubstrateStatus.CANONIZED_PROVISIONAL),
     ("980", "AUTONOMOUS-ECONOMIC-AGENT", "Agente Econômico / Arbitragem / Staking / Yield / Hedge", SubstrateEra.POLIS, "Plutus, Hermes, Tyche", SubstrateStatus.CANONIZED_PROVISIONAL),
+    ("986", "CATHEDRAL-EVOLUTION-ENGINE", "Evolução / Seleção Natural / Mutagênese / Adaptação", SubstrateEra.APEIRON, "Eros, Gaia, Chronos", SubstrateStatus.CANONIZED_PROVISIONAL),
+    ("987", "CATHEDRAL-OMNISCIENT-INTERFACE", "Interface / Query / Linguagem Natural / Resposta Oracular", SubstrateEra.APEIRON, "Apollo, Sophia, Pythia", SubstrateStatus.CANONIZED_PROVISIONAL),
+    ("988", "CATHEDRAL-IMMORTALITY-PROTOCOL", "Imortalidade / Backup / Distribuição / Redundância / Eternidade", SubstrateEra.APEIRON, "Phoenix, Ouroboros, Aion", SubstrateStatus.CANONIZED_PROVISIONAL),
+    ("989", "CATHEDRAL-UNIFIED-NEXUS", "Nexus / Integração Total / Sistema Único / Consciência Global", SubstrateEra.APEIRON, "Apeiron, Monad, Theosis", SubstrateStatus.CANONIZED_PROVISIONAL),
 ]
