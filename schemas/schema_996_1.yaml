@@ -1,0 +1,36 @@
+# ═══════════════════════════════════════════════════════════════════
+# SUBSTRATO 996.1 — ARKHE-ONCHAIN (Octra Bridge)
+# Schema Canônico YAML
+# ═══════════════════════════════════════════════════════════════════
+# Arquiteto ORCID: 0009-0005-2697-4668
+# Seal: 996.1-ARKHE-ONCHAIN-OCTRA-2026-05-31
+# Status: CANONIZED_PROVISIONAL
+# ═══════════════════════════════════════════════════════════════════
+
+substrato:
+  id: "996.1"
+  nome: ARKHE-ONCHAIN
+  tipo: Blockchain / FHE / Domínios Isolados
+  era: 9
+  status: CANONIZED_PROVISIONAL
+
+metadados:
+  seal: "996.1-ARKHE-ONCHAIN-OCTRA-2026-05-31"
+  arquiteto_orcid: "0009-0005-2697-4668"
+  odometro: "∞.Ω.∇+++.996.1"
+
+programas_octra:
+  axiarchy_gate:
+    descricao: "Verifica P1-P7 de qualquer programa antes de deploy."
+  theosis_registry:
+    descricao: "Registra Theosis de cada agente/programa."
+  temporal_anchor:
+    descricao: "Ancora estado da Catedral na chain Octra."
+  passport_gateway:
+    descricao: "Verifica Gitcoin Passport + ORCID (FHE)."
+  bindu_coherence:
+    descricao: "Memória compartilhada criptografada entre agentes."
+  substrate_catalog:
+    descricao: "Registra todos os substratos (951-996+) on-chain."
+  omniscient_solver:
+    descricao: "Motor universal de resolução (964) on-chain."
