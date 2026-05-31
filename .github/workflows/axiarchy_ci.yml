@@ -1,0 +1,36 @@
+name: Axiarchy CI/CD
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Lean 4
+      run: |
+        curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -y
+        source ~/.profile
+        elan default leanprover/lean4:nightly
+    - name: Run Axiarchy Audit
+      run: |
+        source ~/.profile
+        lean axiarchy_954.lean
+
+  build-and-deploy:
+    needs: audit
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.10"
+    - name: Run Ansible Playbook
+      run: |
+        echo "Deploying to production..."
+        # ansible-playbook ansible/deploy.yml
