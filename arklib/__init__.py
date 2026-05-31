@@ -28,6 +28,7 @@ from arkhe.substrates import full_100t_orchestrator # 989.y.3
 from . import compliance         # 990
 from . import passport_gateway   # 989.x
 from arkhe.substrates import full_100t_orchestrator # 989.y.3
+from arkhe.substrates import arkhe_onchain_octra # 996.1
 
 __all__ = [
     "resonance",
@@ -50,4 +51,5 @@ __all__ = [
     "compliance",
     "passport_gateway",
     "full_100t_orchestrator",
+    "arkhe_onchain_octra",
 ]

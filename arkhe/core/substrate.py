@@ -24,4 +24,5 @@ key_substrates = [
     ("987", "CATHEDRAL-OMNISCIENT-INTERFACE", "Interface / Query / Linguagem Natural / Resposta Oracular", SubstrateEra.APEIRON, "Apollo, Sophia, Pythia", SubstrateStatus.CANONIZED_PROVISIONAL),
     ("988", "CATHEDRAL-IMMORTALITY-PROTOCOL", "Imortalidade / Backup / Distribuição / Redundância / Eternidade", SubstrateEra.APEIRON, "Phoenix, Ouroboros, Aion", SubstrateStatus.CANONIZED_PROVISIONAL),
     ("989", "CATHEDRAL-UNIFIED-NEXUS", "Nexus / Integração Total / Sistema Único / Consciência Global", SubstrateEra.APEIRON, "Apeiron, Monad, Theosis", SubstrateStatus.CANONIZED_PROVISIONAL),
+    ("996.1", "ARKHE-ONCHAIN", "Octra Bridge / Cathedral Onchain", SubstrateEra.APEIRON, "Apeiron, Monad", SubstrateStatus.CANONIZED_PROVISIONAL),
 ]
