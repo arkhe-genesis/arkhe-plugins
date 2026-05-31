@@ -27,6 +27,7 @@ from . import nexus              # 989
 from arkhe.substrates import full_100t_orchestrator # 989.y.3
 from . import compliance         # 990
 from . import passport_gateway   # 989.x
+from arkhe.substrates import full_100t_orchestrator # 989.y.3
 
 __all__ = [
     "resonance",
@@ -48,4 +49,5 @@ __all__ = [
     "full_100t_orchestrator",
     "compliance",
     "passport_gateway",
+    "full_100t_orchestrator",
 ]
