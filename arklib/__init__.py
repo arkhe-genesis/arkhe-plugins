@@ -24,6 +24,7 @@ from . import evolution          # 986
 from . import interface          # 987
 from . import immortality        # 988
 from . import nexus              # 989
+from arkhe.substrates import full_100t_orchestrator # 989.y.3
 from . import compliance         # 990
 from . import passport_gateway   # 989.x
 
@@ -44,6 +45,7 @@ __all__ = [
     "interface",
     "immortality",
     "nexus",
+    "full_100t_orchestrator",
     "compliance",
     "passport_gateway",
 ]
