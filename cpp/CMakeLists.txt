@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.10)
+project(arkhe_cpp)
+enable_testing()
+add_executable(dummy_test main.cpp)
+add_test(NAME dummy_test COMMAND dummy_test)
