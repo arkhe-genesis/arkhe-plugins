@@ -33,8 +33,11 @@ from arkhe.substrates.desci_nodes_bridge import DeSciNodesBridge
 from arkhe.substrates.full_100t_orchestrator import Full100TOrchestrator
 
 __all__.extend([
+    "Full100TOrchestrator",
     "UnifiedOrchestrator",
     "FAIRMetricsDashboard",
     "DeSciNodesBridge",
     "Full100TOrchestrator",
 ])
+
+from arkhe.substrates.full_100t_orchestrator import Full100TOrchestrator

@@ -30,7 +30,7 @@ import heapq
 # ENUMS E ESTRUTURAS DE DADOS
 # =====================================================================
 
-class InferencePriority(int, Enum):
+class InferencePriority(Enum):
     CRITICAL = 0     # Arquiteto, DAO governance
     HIGH = 1         # Enterprise Mind, pesquisa ativa
     MEDIUM = 2       # Agentes em treinamento, testes
@@ -452,5 +452,5 @@ async def demo():
     await orchestrator.stop()
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     asyncio.run(demo())

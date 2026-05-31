@@ -5,6 +5,7 @@ import pytest
 import asyncio
 import sys
 import os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 from arkhe.substrates.full_100t_orchestrator import (
     Full100TOrchestrator, InferenceJob, InferencePriority,
