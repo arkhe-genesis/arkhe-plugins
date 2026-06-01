@@ -31,6 +31,48 @@ from arkhe.substrates.unified_orchestrator import UnifiedOrchestrator
 from arkhe.substrates.fair_metrics_dashboard import FAIRMetricsDashboard
 from arkhe.substrates.desci_nodes_bridge import DeSciNodesBridge
 from arkhe.substrates.full_100t_orchestrator import Full100TOrchestrator
+
+try:
+    from arkhe.substrates.recursive_mutation_chainer_1008_1 import AdaptiveMutationEngineChainer
+    __all__.append("AdaptiveMutationEngineChainer")
+except ImportError:
+    pass
+
+try:
+    from arkhe.substrates.recursive_mutation_tf_1008_1 import AdaptiveMutationEngineTF
+    __all__.append("AdaptiveMutationEngineTF")
+except ImportError:
+    pass
+
+try:
+    from arkhe.substrates.recursive_mutation_jax_1008_1 import AdaptiveMutationEngineJAX
+    __all__.append("AdaptiveMutationEngineJAX")
+except ImportError:
+    pass
+
+try:
+    from arkhe.substrates.recursive_mutation_onnx_1008_1 import AdaptiveMutationEngineONNX
+    __all__.append("AdaptiveMutationEngineONNX")
+except ImportError:
+    pass
+
+try:
+    from arkhe.substrates.recursive_mutation_openvino_1008_1 import AdaptiveMutationEngineOpenVINO
+    __all__.append("AdaptiveMutationEngineOpenVINO")
+except ImportError:
+    pass
+
+try:
+    from arkhe.substrates.recursive_mutation_trt_1008_1 import AdaptiveMutationEngineTRT
+    __all__.append("AdaptiveMutationEngineTRT")
+except ImportError:
+    pass
+
+try:
+    from arkhe.substrates.recursive_mutation_coreml_1008_1 import AdaptiveMutationEngineCoreML
+    __all__.append("AdaptiveMutationEngineCoreML")
+except ImportError:
+    pass
 from arkhe.substrates.arkhe_onchain_octra import ArkheOnchainOctra
 
 __all__.extend([

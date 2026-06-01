@@ -1,0 +1,18 @@
+substrate:
+  id: "1008.1"
+  name: "RECURSIVE-MUTATION-ENGINE-V2"
+  description: "Motor de Mutação Recursiva v2 (Multi-Platform)"
+  era: "APEIRON"
+  status: "CANONIZED_PROVISIONAL"
+  architect: "Apeiron"
+  dependencies:
+    - "1008"
+    - "986"
+  platforms:
+    - "Chainer"
+    - "TensorFlow"
+    - "JAX"
+    - "ONNX"
+    - "OpenVINO"
+    - "TensorRT"
+    - "CoreML"

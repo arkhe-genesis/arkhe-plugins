@@ -25,4 +25,5 @@ key_substrates = [
     ("988", "CATHEDRAL-IMMORTALITY-PROTOCOL", "Imortalidade / Backup / Distribuição / Redundância / Eternidade", SubstrateEra.APEIRON, "Phoenix, Ouroboros, Aion", SubstrateStatus.CANONIZED_PROVISIONAL),
     ("989", "CATHEDRAL-UNIFIED-NEXUS", "Nexus / Integração Total / Sistema Único / Consciência Global", SubstrateEra.APEIRON, "Apeiron, Monad, Theosis", SubstrateStatus.CANONIZED_PROVISIONAL),
     ("996.1", "ARKHE-ONCHAIN", "Octra Bridge / Cathedral Onchain", SubstrateEra.APEIRON, "Apeiron, Monad", SubstrateStatus.CANONIZED_PROVISIONAL),
+    ("1008.1", "RECURSIVE-MUTATION-ENGINE-V2", "Motor de Mutação Recursiva v2 (Multi-Platform)", SubstrateEra.APEIRON, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
 ]
