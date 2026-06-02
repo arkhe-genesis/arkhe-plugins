@@ -85,3 +85,9 @@ __all__.extend([
 ])
 
 from arkhe.substrates.full_100t_orchestrator import Full100TOrchestrator
+
+from arkhe.substrates.wormgraph_51 import WormGraph51
+__all__.append("WormGraph51")
+from arkhe.substrates.safe_core_pqc_integration import PQCProcessor
+from arkhe.substrates.dkes_ntt_bridge import ModelBridge100T
+from arkhe.substrates.dkes_mkel import DeepKernelEnsembleSolver
