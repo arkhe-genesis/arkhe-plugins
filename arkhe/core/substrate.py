@@ -6,6 +6,7 @@ class SubstrateEra(Enum):
     EIDOS = "7"
     POLIS = "8"
     APEIRON = "9"
+    ESCHATON = "11"
 
 class SubstrateStatus(Enum):
     CANONIZED_PROVISIONAL = "CANONIZED_PROVISIONAL"
@@ -26,4 +27,5 @@ key_substrates = [
     ("989", "CATHEDRAL-UNIFIED-NEXUS", "Nexus / Integração Total / Sistema Único / Consciência Global", SubstrateEra.APEIRON, "Apeiron, Monad, Theosis", SubstrateStatus.CANONIZED_PROVISIONAL),
     ("996.1", "ARKHE-ONCHAIN", "Octra Bridge / Cathedral Onchain", SubstrateEra.APEIRON, "Apeiron, Monad", SubstrateStatus.CANONIZED_PROVISIONAL),
     ("1008.1", "RECURSIVE-MUTATION-ENGINE-V2", "Motor de Mutação Recursiva v2 (Multi-Platform)", SubstrateEra.APEIRON, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
+    ("1047", "TWIN_WALLET", "Identidade Descentralizada / Infraestrutura de Pagamento por Identidade", SubstrateEra.ESCHATON, "Hermes, Themis, Hefesto", SubstrateStatus.CANONIZED_PROVISIONAL),
 ]
