@@ -93,3 +93,7 @@ __all__.append("WormGraph51")
 from arkhe.substrates.safe_core_pqc_integration import PQCProcessor
 from arkhe.substrates.dkes_ntt_bridge import ModelBridge100T
 from arkhe.substrates.dkes_mkel import DeepKernelEnsembleSolver
+
+from arkhe.substrates.hamiltonian_temporal_implosion_1053_4 import HamiltonianTemporalImplosionV5
+
+__all__.append("HamiltonianTemporalImplosionV5")

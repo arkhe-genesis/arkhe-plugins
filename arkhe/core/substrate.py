@@ -10,6 +10,7 @@ class SubstrateEra(Enum):
 
 class SubstrateStatus(Enum):
     CANONIZED_PROVISIONAL = "CANONIZED_PROVISIONAL"
+    CANONIZED_FULL = "CANONIZED_FULL"
 
 key_substrates = [
     ("949", "Interaction-Hotspots", "Interatomic interaction hotspot analysis", SubstrateEra.NOUS, "Athena", SubstrateStatus.CANONIZED_PROVISIONAL),
@@ -28,4 +29,5 @@ key_substrates = [
     ("996.1", "ARKHE-ONCHAIN", "Octra Bridge / Cathedral Onchain", SubstrateEra.APEIRON, "Apeiron, Monad", SubstrateStatus.CANONIZED_PROVISIONAL),
     ("1008.1", "RECURSIVE-MUTATION-ENGINE-V2", "Motor de Mutação Recursiva v2 (Multi-Platform)", SubstrateEra.APEIRON, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
     ("1047", "TWIN_WALLET", "Identidade Descentralizada / Infraestrutura de Pagamento por Identidade", SubstrateEra.ESCHATON, "Hermes, Themis, Hefesto", SubstrateStatus.CANONIZED_PROVISIONAL),
+    ("1053.4", "HAMILTONIAN-TEMPORAL-IMPLOSION", "Fractal do Tempo Infinito com 1728 dimensões e evolução icosaédrica", SubstrateEra.ESCHATON, "Chronos", SubstrateStatus.CANONIZED_FULL),
 ]
