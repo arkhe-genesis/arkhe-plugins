@@ -99,3 +99,6 @@ from arkhe.substrates.dkes_mkel import DeepKernelEnsembleSolver
 from arkhe.substrates.hamiltonian_temporal_implosion_1053_4 import HamiltonianTemporalImplosionV5
 
 __all__.append("HamiltonianTemporalImplosionV5")
+
+from arkhe.substrates.plastic_zkagi_v4 import PlasticZkAGI_v4, create_plastic_zkagi_v4
+__all__.extend(['PlasticZkAGI_v4', 'create_plastic_zkagi_v4'])
