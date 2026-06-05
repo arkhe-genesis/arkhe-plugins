@@ -75,6 +75,7 @@ except ImportError:
     pass
 from arkhe.substrates.arkhe_onchain_octra import ArkheOnchainOctra
 from arkhe.substrates.twin_wallet_1047 import TwinWalletBridge
+from arkhe.substrates.digital_asset_custody_1074 import DigitalAssetCustodyBridge
 
 __all__.extend([
     "Full100TOrchestrator",
@@ -84,6 +85,7 @@ __all__.extend([
     "Full100TOrchestrator",
     "ArkheOnchainOctra",
     "TwinWalletBridge",
+    "DigitalAssetCustodyBridge",
 ])
 
 from arkhe.substrates.full_100t_orchestrator import Full100TOrchestrator
