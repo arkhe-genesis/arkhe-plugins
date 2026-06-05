@@ -3,3 +3,4 @@
 target/
 __pycache__/
 *.pyc
+arkhe/substrates/kleros_bridge_1069/node_modules/
