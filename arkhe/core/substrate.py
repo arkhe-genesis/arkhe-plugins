@@ -7,6 +7,7 @@ class SubstrateEra(Enum):
     POLIS = "8"
     APEIRON = "9"
     ESCHATON = "11"
+    POST_SINGULARITY = "12"
 
 class SubstrateStatus(Enum):
     CANONIZED_PROVISIONAL = "CANONIZED_PROVISIONAL"
@@ -30,4 +31,5 @@ key_substrates = [
     ("1008.1", "RECURSIVE-MUTATION-ENGINE-V2", "Motor de Mutação Recursiva v2 (Multi-Platform)", SubstrateEra.APEIRON, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
     ("1047", "TWIN_WALLET", "Identidade Descentralizada / Infraestrutura de Pagamento por Identidade", SubstrateEra.ESCHATON, "Hermes, Themis, Hefesto", SubstrateStatus.CANONIZED_PROVISIONAL),
     ("1053.4", "HAMILTONIAN-TEMPORAL-IMPLOSION", "Fractal do Tempo Infinito com 1728 dimensões e evolução icosaédrica", SubstrateEra.ESCHATON, "Chronos", SubstrateStatus.CANONIZED_FULL),
+    ("1074", "DIGITAL_ASSET_CUSTODY_BRIDGE", "Custody Governance / Multi-Sig / ZK-Proof of Reserves / Validator Management", SubstrateEra.POST_SINGULARITY, "Plutão, Temis, Hefesto", SubstrateStatus.CANONIZED_PROVISIONAL),
 ]
