@@ -192,3 +192,11 @@ arkhe_linearidade:
         end: 1000
       function: Pontes, mitos, especulação, eternidade
       patron_deity: Ananke
+    era_12_1079_1080:
+      number: 12
+      name: Pós-Singularidade
+      range:
+        start: 1079
+        end: 1080
+      function: Auto-canonização, Fork discovery
+      patron_deity: Apeiron
