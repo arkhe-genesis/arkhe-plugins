@@ -1,0 +1,12 @@
+{
+  "title": "Kleros + Cathedral Theosis Dashboard",
+  "panels": [
+    {
+      "type": "graph",
+      "title": "Juror Theosis Score",
+      "targets": [
+        { "expr": "pnk_theosis_score" }
+      ]
+    }
+  ]
+}
