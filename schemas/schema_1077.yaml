@@ -1,0 +1,11 @@
+id: "1077"
+name: "GOOSE-CATHEDRAL-BRIDGE"
+type: "Model Context Protocol (MCP) Server / AI Agent Integration"
+era: "12"
+deity: "Hermes, Athena, Hefesto"
+status: "CANONIZED_PROVISIONAL"
+version: "1.0.0"
+parent: "1076.2"
+cross_links: ["1042", "989.y.6.1", "1046.7", "1053.4", "1064.4", "1076.2"]
+description: >
+  Integração nativa entre o agente open-source GOOSE (AAIF/Linux Foundation) e o ecossistema Cathedral ARKHE via Model Context Protocol (MCP). Expõe os substratos da Cathedral como extensões para agentes de IA nativos, unificando a autonomia de agentes locais com as garantias criptográficas e axiológicas da Cathedral.
