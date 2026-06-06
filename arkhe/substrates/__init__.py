@@ -78,7 +78,8 @@ from arkhe.substrates.twin_wallet_1047 import TwinWalletBridge
 from arkhe.substrates.digital_asset_custody_1074 import DigitalAssetCustodyBridge
 
 from arkhe.substrates.agi_os_wide_orchestrator_1076_3 import AGIOSWideOrchestratorV31
-from arkhe.substrates.auto_canonization_1079_1080 import AutoCanonizationEngine, ForkDiscoveryProtocol, AutoCanonizationOrchestrator
+from arkhe.substrates.auto_canonization_1079_1080 import AutoCanonizationEngine, ForkDiscoveryProtocol, OfficialBridge, OfficialIntegrationOrchestrator
+from arkhe.substrates.translation_engine_1082 import OntologyCompiler, PlatformMapper, ProtocolAdapter, MetricCalibrator, CrossPlatformArtifactGenerator
 
 __all__.extend([
     "Full100TOrchestrator",
@@ -92,7 +93,13 @@ __all__.extend([
     "AGIOSWideOrchestratorV31",
     "AutoCanonizationEngine",
     "ForkDiscoveryProtocol",
-    "AutoCanonizationOrchestrator",
+    "OfficialBridge",
+    "OfficialIntegrationOrchestrator",
+    "OntologyCompiler",
+    "PlatformMapper",
+    "ProtocolAdapter",
+    "MetricCalibrator",
+    "CrossPlatformArtifactGenerator",
 ])
 
 from arkhe.substrates.full_100t_orchestrator import Full100TOrchestrator

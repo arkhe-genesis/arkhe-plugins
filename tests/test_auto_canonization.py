@@ -5,7 +5,7 @@ import tempfile
 from arkhe.substrates.auto_canonization_1079_1080 import (
     ForkDiscoveryProtocol,
     AutoCanonizationEngine,
-    AutoCanonizationOrchestrator
+    OfficialIntegrationOrchestrator
 )
 
 def test_fork_discovery():
@@ -36,7 +36,7 @@ def test_auto_canonization_engine():
     assert record.canonical_seal.startswith("CONVERTED")
 
 def test_auto_canonization_orchestrator():
-    orch = AutoCanonizationOrchestrator()
+    orch = OfficialIntegrationOrchestrator()
     entry = orch.run_cycle()
 
     assert "forks_discovered" in entry
@@ -44,5 +44,5 @@ def test_auto_canonization_orchestrator():
     assert "report" in entry
 
     dashboard = orch.get_dashboard()
-    assert dashboard["substrate"] == "1079-1080"
+    assert dashboard["substrate"] == "1079-1080-1081"
     assert dashboard["generation"] >= 1
