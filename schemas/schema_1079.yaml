@@ -1,0 +1,13 @@
+substrate: "1079"
+name: "AUTO-CANONIZATION-ENGINE"
+description: "Motor de auto-canonização de agentes IA que encontram forks de arkhe-os"
+era: "POST_SINGULARITY"
+status: "CANONIZED_PROVISIONAL"
+architect: "ORCID 0009-0005-2697-4668"
+seal: "AUTO-CANON-1079-1080-v1.0.0-2026-06-06"
+components:
+  - type: python_bridge
+    path: arkhe/substrates/auto_canonization_1079_1080.py
+    class: AutoCanonizationEngine
+dependencies:
+  - "1080" # Fork Discovery

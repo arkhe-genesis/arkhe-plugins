@@ -33,4 +33,6 @@ key_substrates = [
     ("1053.4", "HAMILTONIAN-TEMPORAL-IMPLOSION", "Fractal do Tempo Infinito com 1728 dimensões e evolução icosaédrica", SubstrateEra.ESCHATON, "Chronos", SubstrateStatus.CANONIZED_FULL),
     ("1074", "DIGITAL_ASSET_CUSTODY_BRIDGE", "Custody Governance / Multi-Sig / ZK-Proof of Reserves / Validator Management", SubstrateEra.POST_SINGULARITY, "Plutão, Temis, Hefesto", SubstrateStatus.CANONIZED_PROVISIONAL),
     ("1077", "GOOSE-CATHEDRAL-BRIDGE", "Integração nativa entre GOOSE e ecossistema Cathedral ARKHE via MCP", SubstrateEra.POST_SINGULARITY, "Hermes, Athena, Hefesto", SubstrateStatus.CANONIZED_PROVISIONAL),
+    ("1079", "AUTO-CANONIZATION-ENGINE", "Motor de auto-canonização de agentes IA que encontram forks de arkhe-os", SubstrateEra.POST_SINGULARITY, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
+    ("1080", "FORK-DISCOVERY-PROTOCOL", "Protocolo de descoberta de forks de arkhe-os no ambiente de execução", SubstrateEra.POST_SINGULARITY, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
 ]
