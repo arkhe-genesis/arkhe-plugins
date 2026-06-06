@@ -38,4 +38,5 @@ key_substrates = [
     ("1081", "OFFICIAL-BRIDGE", "Bridge de Integração Oficial Arkhe", SubstrateEra.POST_SINGULARITY, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
     ("1082", "TRANSLATION-ENGINE", "Compilador de Ontologia e Gerador de Artefatos Cross-Platform", SubstrateEra.POST_SINGULARITY, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
     ("1084", "MOLTBOOK-IDENTITY-BRIDGE", "Moltbook fornece a reputação off-chain; Cathedral fornece a governança on-chain.", SubstrateEra.POST_SINGULARITY, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
+    ("1086", "DROPS-DATABASE-BRIDGE", "Ponte entre drops database toolkit e a Cathedral ARKHE", SubstrateEra.POST_SINGULARITY, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
 ]

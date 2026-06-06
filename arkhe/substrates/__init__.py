@@ -122,3 +122,5 @@ __all__.extend(["GooseMCPCathedralServer", "GooseExtensionManifest"])
 
 from arkhe.substrates.moltbook_identity_1084 import MoltbookBridgeOrchestrator
 __all__.append("MoltbookBridgeOrchestrator")
+from arkhe.substrates.drops_database_bridge_1086 import DropsBridgeOrchestrator
+__all__.append("DropsBridgeOrchestrator")
