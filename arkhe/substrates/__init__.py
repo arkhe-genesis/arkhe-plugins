@@ -105,3 +105,6 @@ __all__.append("HamiltonianTemporalImplosionV5")
 
 from arkhe.substrates.plastic_zkagi_v4 import PlasticZkAGI_v4, create_plastic_zkagi_v4
 __all__.extend(['PlasticZkAGI_v4', 'create_plastic_zkagi_v4'])
+
+from arkhe.substrates.goose_cathedral_bridge_1077 import GooseMCPCathedralServer, GooseExtensionManifest
+__all__.extend(["GooseMCPCathedralServer", "GooseExtensionManifest"])
