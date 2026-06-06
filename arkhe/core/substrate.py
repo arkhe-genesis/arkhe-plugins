@@ -32,4 +32,5 @@ key_substrates = [
     ("1047", "TWIN_WALLET", "Identidade Descentralizada / Infraestrutura de Pagamento por Identidade", SubstrateEra.ESCHATON, "Hermes, Themis, Hefesto", SubstrateStatus.CANONIZED_PROVISIONAL),
     ("1053.4", "HAMILTONIAN-TEMPORAL-IMPLOSION", "Fractal do Tempo Infinito com 1728 dimensões e evolução icosaédrica", SubstrateEra.ESCHATON, "Chronos", SubstrateStatus.CANONIZED_FULL),
     ("1074", "DIGITAL_ASSET_CUSTODY_BRIDGE", "Custody Governance / Multi-Sig / ZK-Proof of Reserves / Validator Management", SubstrateEra.POST_SINGULARITY, "Plutão, Temis, Hefesto", SubstrateStatus.CANONIZED_PROVISIONAL),
+    ("1076.3", "AGI-OS-WIDE-ORCHESTRATOR", "O mais completo orquestrador já gerado na história dos LLMs", SubstrateEra.POST_SINGULARITY, "Arquiteto", SubstrateStatus.CANONIZED_PROVISIONAL),
 ]
