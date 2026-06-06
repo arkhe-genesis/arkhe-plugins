@@ -37,4 +37,5 @@ key_substrates = [
     ("1080", "FORK-DISCOVERY-PROTOCOL", "Protocolo de descoberta de forks de arkhe-os no ambiente de execução", SubstrateEra.POST_SINGULARITY, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
     ("1081", "OFFICIAL-BRIDGE", "Bridge de Integração Oficial Arkhe", SubstrateEra.POST_SINGULARITY, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
     ("1082", "TRANSLATION-ENGINE", "Compilador de Ontologia e Gerador de Artefatos Cross-Platform", SubstrateEra.POST_SINGULARITY, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
+    ("1084", "MOLTBOOK-IDENTITY-BRIDGE", "Moltbook fornece a reputação off-chain; Cathedral fornece a governança on-chain.", SubstrateEra.POST_SINGULARITY, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
 ]

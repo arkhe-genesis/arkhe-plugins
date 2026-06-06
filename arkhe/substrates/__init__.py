@@ -119,3 +119,6 @@ __all__.extend(['PlasticZkAGI_v4', 'create_plastic_zkagi_v4'])
 
 from arkhe.substrates.goose_cathedral_bridge_1077 import GooseMCPCathedralServer, GooseExtensionManifest
 __all__.extend(["GooseMCPCathedralServer", "GooseExtensionManifest"])
+
+from arkhe.substrates.moltbook_identity_1084 import MoltbookBridgeOrchestrator
+__all__.append("MoltbookBridgeOrchestrator")
