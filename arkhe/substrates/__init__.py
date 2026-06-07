@@ -124,3 +124,7 @@ from arkhe.substrates.moltbook_identity_1084 import MoltbookBridgeOrchestrator
 __all__.append("MoltbookBridgeOrchestrator")
 from arkhe.substrates.drops_database_bridge_1086 import DropsBridgeOrchestrator
 __all__.append("DropsBridgeOrchestrator")
+from arkhe.substrates.complex_network_optimization_1088 import CathedralGraph, OfficialEcosystemBridge1083
+__all__.extend(["CathedralGraph", "OfficialEcosystemBridge1083"])
+from arkhe.substrates.dynamic_system_identification_1089 import SINDyEngine, SINDyBridge
+__all__.extend(["SINDyEngine", "SINDyBridge"])
