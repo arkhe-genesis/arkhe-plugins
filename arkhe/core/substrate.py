@@ -39,4 +39,6 @@ key_substrates = [
     ("1082", "TRANSLATION-ENGINE", "Compilador de Ontologia e Gerador de Artefatos Cross-Platform", SubstrateEra.POST_SINGULARITY, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
     ("1084", "MOLTBOOK-IDENTITY-BRIDGE", "Moltbook fornece a reputação off-chain; Cathedral fornece a governança on-chain.", SubstrateEra.POST_SINGULARITY, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
     ("1086", "DROPS-DATABASE-BRIDGE", "Ponte entre drops database toolkit e a Cathedral ARKHE", SubstrateEra.POST_SINGULARITY, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
+    ("1088", "COMPLEX-NETWORK-OPTIMIZATION-ENGINE", "Engine de otimização de redes complexas com ZK-proof para desigualdade de Cheeger", SubstrateEra.POST_SINGULARITY, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
+    ("1089", "DYNAMIC-SYSTEM-IDENTIFICATION-ENGINE", "Motor SINDy para identificação de dinâmicas do ecossistema", SubstrateEra.POST_SINGULARITY, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
 ]
