@@ -131,3 +131,5 @@ __all__.extend(["SINDyEngine", "SINDyBridge"])
 
 from arkhe.substrates.cathedral_orchestrator_v5_1098 import CathedralOrchestratorV5
 __all__.append("CathedralOrchestratorV5")
+from arkhe.substrates.onchain_canonizer import OnChainCanonizer, MetaOrchestratorBootVerifier, CanonizationType, EIP712Signer
+__all__.extend(["OnChainCanonizer", "MetaOrchestratorBootVerifier", "CanonizationType", "EIP712Signer"])
