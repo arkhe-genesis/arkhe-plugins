@@ -128,3 +128,6 @@ from arkhe.substrates.complex_network_optimization_1088 import CathedralGraph, O
 __all__.extend(["CathedralGraph", "OfficialEcosystemBridge1083"])
 from arkhe.substrates.dynamic_system_identification_1089 import SINDyEngine, SINDyBridge
 __all__.extend(["SINDyEngine", "SINDyBridge"])
+
+from arkhe.substrates.cathedral_orchestrator_v5_1098 import CathedralOrchestratorV5
+__all__.append("CathedralOrchestratorV5")
