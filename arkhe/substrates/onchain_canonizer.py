@@ -825,7 +825,7 @@ class RecursiveProofChain:
 
     def __init__(self, genesis_hash: Optional[str] = None):
         self.nodes: Dict[str, ProofNode] = {}
-        self.ordered_indices: List[int] = []
+        self.ordered_hashes: List[str] = []
         self.current_index = 0
         self.tip_hash: Optional[str] = None
 
@@ -845,7 +845,7 @@ class RecursiveProofChain:
     def _add_node(self, node: ProofNode):
         node.proof_hash = node.compute_hash()
         self.nodes[node.proof_hash] = node
-        self.ordered_indices.append(node.index)
+        self.ordered_hashes.append(node.proof_hash)
         self.tip_hash = node.proof_hash
 
         if node.parent_hash and node.parent_hash in self.nodes:
@@ -926,17 +926,17 @@ class RecursiveProofChain:
 
     def get_proof_chain(self, from_index: int = 0) -> List[ProofNode]:
         """Get the proof chain from a specific index"""
-        return [self.nodes[h] for h in self.ordered_indices if self.nodes[h].index >= from_index]
+        return [self.nodes[h] for h in self.ordered_hashes if self.nodes[h].index >= from_index]
 
     def get_chain_hash(self) -> str:
         """Get a hash representing the entire chain state"""
-        if not self.ordered_indices:
+        if not self.ordered_hashes:
             return "0x" + hashlib.sha256(b"empty_chain").hexdigest()
 
         chain_content = json.dumps({
             "tip": self.tip_hash,
-            "length": len(self.ordered_indices),
-            "nodes": [self.nodes[h].proof_hash for h in self.ordered_indices[-100:]]  # Last 100 for efficiency
+            "length": len(self.ordered_hashes),
+            "nodes": [self.nodes[h].proof_hash for h in self.ordered_hashes[-100:]]  # Last 100 for efficiency
         }, sort_keys=True)
 
         return "0x" + hashlib.sha256(chain_content.encode()).hexdigest()
@@ -945,7 +945,7 @@ class RecursiveProofChain:
         """Verify the integrity of the entire chain"""
         errors = []
 
-        for i, hash_val in enumerate(self.ordered_indices):
+        for i, hash_val in enumerate(self.ordered_hashes):
             node = self.nodes[hash_val]
 
             # Verify parent linkage
@@ -1584,7 +1584,7 @@ class OnChainCanonizer:
             },
             "proof_chain": {
                 "tip_hash": self.proof_chain.tip_hash,
-                "length": len(self.proof_chain.ordered_indices),
+                "length": len(self.proof_chain.ordered_hashes),
                 "chain_hash": self.proof_chain.get_chain_hash()
             },
             "governance": {
