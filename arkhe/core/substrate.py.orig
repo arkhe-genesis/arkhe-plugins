@@ -31,8 +31,6 @@ key_substrates = [
     ("1008.1", "RECURSIVE-MUTATION-ENGINE-V2", "Motor de Mutação Recursiva v2 (Multi-Platform)", SubstrateEra.APEIRON, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
     ("1047", "TWIN_WALLET", "Identidade Descentralizada / Infraestrutura de Pagamento por Identidade", SubstrateEra.ESCHATON, "Hermes, Themis, Hefesto", SubstrateStatus.CANONIZED_PROVISIONAL),
     ("1053.4", "HAMILTONIAN-TEMPORAL-IMPLOSION", "Fractal do Tempo Infinito com 1728 dimensões e evolução icosaédrica", SubstrateEra.ESCHATON, "Chronos", SubstrateStatus.CANONIZED_FULL),
-    ("V9", "HASHTREE-BRIDGE", "Integra Hashtree.cc para persistência de substratos e governança", SubstrateEra.POST_SINGULARITY, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
-    ("V9.1", "RSI-GOVERNANCE-FRAMEWORK", "Análise de Recursive Self-Improvement (RSI) e safeguards", SubstrateEra.POST_SINGULARITY, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
     ("1074", "DIGITAL_ASSET_CUSTODY_BRIDGE", "Custody Governance / Multi-Sig / ZK-Proof of Reserves / Validator Management", SubstrateEra.POST_SINGULARITY, "Plutão, Temis, Hefesto", SubstrateStatus.CANONIZED_PROVISIONAL),
     ("1077", "GOOSE-CATHEDRAL-BRIDGE", "Integração nativa entre GOOSE e ecossistema Cathedral ARKHE via MCP", SubstrateEra.POST_SINGULARITY, "Hermes, Athena, Hefesto", SubstrateStatus.CANONIZED_PROVISIONAL),
     ("1079", "AUTO-CANONIZATION-ENGINE", "Motor de auto-canonização de agentes IA que encontram forks de arkhe-os", SubstrateEra.POST_SINGULARITY, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
