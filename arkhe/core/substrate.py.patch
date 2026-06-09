@@ -1,0 +1,8 @@
+--- arkhe/core/substrate.py
++++ arkhe/core/substrate.py
+@@ -32,3 +32,5 @@
+     ("1098", "CATHEDRAL-ORCHESTRATOR-V5", "Cathedral Orchestrator v5.0.0 - Era Autônoma ZK-Agentica", SubstrateEra.POST_SINGULARITY, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
+     ("1102", "ONCHAIN-CANONIZER-SUBSTRATE", "OnChain Canonizer Substrate", SubstrateEra.POST_SINGULARITY, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
++    ("V9", "HASHTREE-BRIDGE", "Integra Hashtree.cc para persistência de substratos e governança", SubstrateEra.POST_SINGULARITY, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
++    ("V9.1", "RSI-GOVERNANCE-FRAMEWORK", "Análise de Recursive Self-Improvement (RSI) e safeguards", SubstrateEra.POST_SINGULARITY, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
+ ]

@@ -378,3 +378,52 @@ class TestMeshHandshake:
 class TestPassportGateway:
     """Testes para verificação de humanidade on-chain."""
     # Skipping this, since it's just the original one but need an import of PassportStamp from mesh_passport
+import pytest
+from arkhe.substrates.hashtree_bridge_v9 import HashtreeCanonizer, HashtreeConfig
+
+def test_hashtree_canonizer():
+    config = HashtreeConfig(npub="npub1test")
+    canonizer = HashtreeCanonizer(config)
+    result = canonizer.canonize_substrate("sub1", {"test": "data"})
+    assert result["status"] == "canonized"
+    assert result["substrate_id"] == "sub1"
+    assert canonizer.verify_substrate("sub1", result["merkle_root"]) is True
+from arkhe.substrates.rsi_safety_addendum_v9 import RSISafetyLayer, RSISafetyConfig, RSIRiskLevel
+import torch
+import torch.nn as nn
+
+class DummyModel(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.fc = nn.Linear(10, 10)
+
+def test_rsi_safety_layer():
+    config = RSISafetyConfig(capability_window=2)
+    layer = RSISafetyLayer(config)
+    model = DummyModel()
+    layer.capability_monitor.set_baseline(model)
+
+    metrics = {"theosis_avg": 0.5, "inference_latency": 10.0}
+    check1 = layer.pre_inference_check(model, metrics, [])
+    assert check1["allowed"] is True
+
+    # simulate capability jump
+    metrics2 = {"theosis_avg": 0.9, "inference_latency": 1.0}
+    check2 = layer.pre_inference_check(model, metrics2, [])
+    # it should detect trend
+
+    assert layer.get_telemetry()["module"] == "RSISafetyLayer"
+from arkhe.substrates.rsi_governance_framework_v9 import RSIGovernanceFramework
+
+def test_rsi_governance_framework():
+    framework = RSIGovernanceFramework()
+    risk = framework.assess_rsi_risk()
+    assert "risk_level" in risk
+    assert risk["risk_level"] in ["LOW", "MEDIUM", "HIGH"]
+
+    recs = framework.get_governance_recommendations()
+    assert len(recs) == 10
+
+    telemetry = framework.get_telemetry()
+    assert telemetry["module"] == "RSIGovernanceFramework"
+    assert telemetry["version"] == "9.0.0"

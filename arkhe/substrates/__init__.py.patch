@@ -1,0 +1,14 @@
+--- arkhe/substrates/__init__.py
++++ arkhe/substrates/__init__.py
+@@ -107,3 +107,12 @@
+ from arkhe.substrates.onchain_canonizer import OnChainCanonizer, MetaOrchestratorBootVerifier, CanonizationType, EIP712Signer
+ __all__.extend(["OnChainCanonizer", "MetaOrchestratorBootVerifier", "CanonizationType", "EIP712Signer"])
++
++from arkhe.substrates.hashtree_bridge_v9 import HashtreeCanonizer, HashtreeGovernanceBridge, HashtreeConfig
++__all__.extend(["HashtreeCanonizer", "HashtreeGovernanceBridge", "HashtreeConfig"])
++
++from arkhe.substrates.rsi_governance_framework_v9 import RSIGovernanceFramework, RSITimeline, RSIMetrics
++__all__.extend(["RSIGovernanceFramework", "RSITimeline", "RSIMetrics"])
++
++from arkhe.substrates.rsi_safety_addendum_v9 import RSISafetyLayer, RSISafetyConfig, RSIRiskLevel
++__all__.extend(["RSISafetyLayer", "RSISafetyConfig", "RSIRiskLevel"])
