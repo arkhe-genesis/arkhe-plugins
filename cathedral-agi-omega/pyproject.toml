@@ -1,0 +1,20 @@
+[project]
+name = "cathedral-agi-omega"
+version = "0.1.0"
+description = "Cathedral AGI Omega: Integrating Formal Verification, MPC, ZK, and Neural Ecosystems."
+readme = "README.md"
+requires-python = ">=3.9"
+
+dependencies = [
+    "blst-py>=0.1.0",
+    "substrate-interface>=1.7.0",
+    "py_ecc>=6.0.0",
+    "web3>=6.0.0",
+    "neo4j>=5.0.0",
+    "torch>=2.0.0",
+    "ezkl>=0.0.0"
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

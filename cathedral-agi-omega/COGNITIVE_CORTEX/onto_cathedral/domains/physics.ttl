@@ -1,0 +1,30 @@
+@prefix ex: <http://example.org/physics#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+ex:QuantumMechanics a ex:Domain ;
+    ex:hasConcept ex:WaveFunctionCollapse,
+                  ex:Superposition,
+                  ex:Entanglement,
+                  ex:HeisenbergUncertaintyPrinciple,
+                  ex:SchrodingerEquation .
+
+ex:Relativity a ex:Domain ;
+    ex:hasConcept ex:SpecialRelativity,
+                  ex:GeneralRelativity,
+                  ex:TimeDilation,
+                  ex:LengthContraction,
+                  ex:SpacetimeCurvature .
+
+ex:Thermodynamics a ex:Domain ;
+    ex:hasConcept ex:Entropy,
+                  ex:Enthalpy,
+                  ex:FirstLaw,
+                  ex:SecondLaw,
+                  ex:AbsoluteZero .
+
+ex:Electromagnetism a ex:Domain ;
+    ex:hasConcept ex:MaxwellEquations,
+                  ex:MagneticField,
+                  ex:ElectricField,
+                  ex:LorentzForce,
+                  ex:Photon .
