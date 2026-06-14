@@ -148,3 +148,9 @@ from arkhe.substrates.onchain_canonizer import OnChainCanonizer, MetaOrchestrato
 __all__.extend(["OnChainCanonizer", "MetaOrchestratorBootVerifier", "CanonizationType", "EIP712Signer"])
 from arkhe.substrates.sovereign_cognitive_loop_1500 import CathedralOrchestratorV14_0_0
 __all__.append("CathedralOrchestratorV14_0_0")
+
+from arkhe.substrates.cognitive_substrate_1600 import CognitiveSubstrateOrchestrator
+__all__.append("CognitiveSubstrateOrchestrator")
+
+from arkhe.substrates.cathedral_agi_production_1600 import CathedralAGI
+__all__.append("CathedralAGI")

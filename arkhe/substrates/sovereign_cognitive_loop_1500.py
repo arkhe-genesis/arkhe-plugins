@@ -301,6 +301,8 @@ class InferenceRouter:
 # 4. ORCHESTRATOR V14.0.0
 # =============================================================================
 
+from arkhe.substrates.cognitive_substrate_1600 import CognitiveSubstrateOrchestrator
+
 class CathedralOrchestratorV14_0_0:
     def __init__(self, config: Dict):
         self.config = config
@@ -310,11 +312,13 @@ class CathedralOrchestratorV14_0_0:
         self.prom = PrometheusRegistry()
         self.gguf = GgufInferenceEngine(**config.get("gguf", {}))
         self.router = InferenceRouter(self.gguf, config.get("inference", {}).get("cost_limit_usd", 5.0))
+        self.cognitive_orchestrator = CognitiveSubstrateOrchestrator()
         self._server = None
 
     async def start(self):
         logger.info("Iniciando Orquestrador v14.0.0...")
         await self.gguf.start()
+        await self.cognitive_orchestrator.start()
         port = self.config.get("prometheus", {}).get("port", 9090)
         self._server = await asyncio.start_server(self._handle_prom, "0.0.0.0", port)
         logger.info("Prometheus exposto em :%d/metrics", port)
@@ -326,6 +330,7 @@ class CathedralOrchestratorV14_0_0:
     async def stop(self):
         logger.info("Desligando v14.0.0...")
         self._shutdown_event.set()
+        await self.cognitive_orchestrator.stop()
         await self.gguf.stop()
         if self._server: self._server.close(); await self._server.wait_closed()
 
@@ -348,6 +353,16 @@ class CathedralOrchestratorV14_0_0:
         self.cycle += 1
         prompt = f"Analise metricas do ciclo {self.cycle} e sugira otimizações."
         result = await self.router.infer(prompt, complex_reasoning=(self.cycle % 5 == 0))
+
+        # Ingestão de Dados: A saída do GGUF (gguf_output_text) é passada para process_cognitive_tick. O embed real do modelo GGUF deve ser injetado no passo 2 para que a busca episódica seja semanticamente correta (e não baseada em stubs de zeros).
+        embed = await self.gguf.embed(prompt)
+        await self.cognitive_orchestrator.process_cognitive_tick(
+            prompt=prompt,
+            gguf_output_text=result["text"],
+            gguf_tokens=result["tokens"],
+            embed=embed
+        )
+
         self._update_metrics(result)
 
     def _update_metrics(self, res: Dict):
