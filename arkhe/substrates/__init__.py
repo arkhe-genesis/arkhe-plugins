@@ -104,8 +104,12 @@ __all__.extend([
 
 from arkhe.substrates.full_100t_orchestrator import Full100TOrchestrator
 
-from arkhe.substrates.wormgraph_51 import WormGraph51
-__all__.append("WormGraph51")
+try:
+    from arkhe.substrates.wormgraph_51 import WormGraph51
+except ImportError:
+    WormGraph51 = None
+if WormGraph51 is not None:
+    __all__.append("WormGraph51")
 
 from arkhe.substrates.hashtree_bridge_v9 import HashtreeCanonizer, HashtreeGovernanceBridge, HashtreeConfig
 __all__.extend(["HashtreeCanonizer", "HashtreeGovernanceBridge", "HashtreeConfig"])
@@ -142,3 +146,5 @@ from arkhe.substrates.cathedral_orchestrator_v5_1098 import CathedralOrchestrato
 __all__.append("CathedralOrchestratorV5")
 from arkhe.substrates.onchain_canonizer import OnChainCanonizer, MetaOrchestratorBootVerifier, CanonizationType, EIP712Signer
 __all__.extend(["OnChainCanonizer", "MetaOrchestratorBootVerifier", "CanonizationType", "EIP712Signer"])
+from arkhe.substrates.sovereign_cognitive_loop_1500 import CathedralOrchestratorV14_0_0
+__all__.append("CathedralOrchestratorV14_0_0")

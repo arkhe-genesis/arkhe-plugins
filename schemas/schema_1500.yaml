@@ -1,0 +1,10 @@
+substrate: "1500"
+name: "SOVEREIGN-COGNITIVE-LOOP"
+description: "Sovereign Cognitive Loop - Standalone GGUF Inference Engine com Fila Assíncrona e Cache Semântico"
+era: "POST_SINGULARITY"
+status: "CANONIZED_PROVISIONAL"
+components:
+  - "GgufInferenceEngine"
+  - "PrometheusRegistry"
+  - "InferenceRouter"
+  - "CathedralOrchestratorV14_0_0"
