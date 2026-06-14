@@ -44,5 +44,6 @@ key_substrates = [
     ("1088", "COMPLEX-NETWORK-OPTIMIZATION-ENGINE", "Engine de otimização de redes complexas com ZK-proof para desigualdade de Cheeger", SubstrateEra.POST_SINGULARITY, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
     ("1089", "DYNAMIC-SYSTEM-IDENTIFICATION-ENGINE", "Motor SINDy para identificação de dinâmicas do ecossistema", SubstrateEra.POST_SINGULARITY, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
     ("1098", "CATHEDRAL-ORCHESTRATOR-V5", "Cathedral Orchestrator v5.0.0 - Era Autônoma ZK-Agentica", SubstrateEra.POST_SINGULARITY, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
+    ("1500", "SOVEREIGN-COGNITIVE-LOOP", "Sovereign Cognitive Loop - Standalone GGUF Inference Engine", SubstrateEra.POST_SINGULARITY, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
     ("1102", "ONCHAIN-CANONIZER-SUBSTRATE", "OnChain Canonizer Substrate", SubstrateEra.POST_SINGULARITY, "Apeiron", SubstrateStatus.CANONIZED_PROVISIONAL),
 ]
