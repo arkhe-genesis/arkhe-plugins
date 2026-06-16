@@ -1,12 +1,5 @@
-1.  **Understand the Goal**: The user wants to create a new Rust-based operating system project called "ARKHE OS", specifically as per the detailed prompt given. This is "Substrato 996: ARKHE-OS".
-2.  **Verify Setup**: I have already created the directory structure and the basic skeleton of the code inside `arkhe-os/`. This includes the bootloader, kernel, servers, tools, and libs, exactly matching the requested directory structure.
-3.  **Review the Code Structure**:
-    -   `arkhe-os/boot/`: `bootloader.asm`, `bootloader.ld`
-    -   `arkhe-os/kernel/`: `Cargo.toml`, `src/main.rs`, `src/memory.rs`, `src/scheduler.rs`, `src/syscalls.rs`, `src/ipc.rs`, `src/isolation.rs`, `src/temporal.rs`
-    -   `arkhe-os/servers/`: `vfs`, `net`, `passport`, `orchestrator`, `bindu` (all with `Cargo.toml` and `src/main.rs`)
-    -   `arkhe-os/libs/`: `arklib`, `pqc`, `nostr` (all with `Cargo.toml` and `src/lib.rs`)
-    -   `arkhe-os/tools/`: `arkhe-sh`, `pkg`, `checkpoint` (all with `Cargo.toml` and `src/main.rs`)
-    -   `arkhe-os/Cargo.toml`, `arkhe-os/Makefile`, `arkhe-os/README.md`
-4.  **Finalize the implementation**: Add some logic to avoid dead code warnings in the kernel so it's a bit cleaner, though warnings are fine for a skeleton.
-5.  **Pre-commit checks**: Run `pre_commit_instructions` tool and perform the necessary steps.
-6.  **Submit**: Commit and submit.
+1. **Completar multi_agent.rs:** Criar o arquivo `cathedral-arkhe-v28.3/orchestrator/src/multi_agent.rs` contendo a lógica completa (em Rust) para o `MultiAgentOrchestrator` carregar as configurações de `config_loader.rs` (que vai instanciar a estrutura do orchestrator, aplicar o `planning.strategy`, `trust.require_memory_proof`, etc. aos agentes padrão).
+2. **Criar Dockerfile.llm:** Criar o `cathedral-arkhe-v28.3/runtime/Dockerfile.llm` que define um servidor de inferência (baseado num vLLM compatível com a arquitetura definida).
+3. **Adicionar arquivos de exemplo do modelo:** Criar `cathedral-arkhe-v28.3/core/model/chat_template.jinja` e `cathedral-arkhe-v28.3/core/model/generation_config.json`.
+4. **Criar init.sh:** Criar o script `cathedral-arkhe-v28.3/init.sh` que garante a execução da stack, dando permissões e rodando o `docker-compose`.
+5. **Completar passos pré-commit e submeter a PR.**
