@@ -2,7 +2,7 @@ use std::sync::Arc;
 use anyhow::Result;
 use ndarray::Array1;
 
-use crate::geometry::CausalGeometryService;
+use crate::geometry::service::CausalGeometryService;
 use crate::stubs::{LlmClient, ToolResponse};
 
 pub struct ToolSimulator {
