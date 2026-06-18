@@ -6,3 +6,8 @@ __pycache__/
 arkhe/substrates/kleros_bridge_1069/node_modules/
 Cathedral/zvec_data/
 Cathedral/logs/
+
+
+# Added by cargo
+
+/target
