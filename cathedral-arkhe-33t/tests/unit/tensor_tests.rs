@@ -1,4 +1,4 @@
-use cathedral_33t::tensor::Tensor;
+use cathedral_arkhe_33t::tensor::Tensor;
 
 #[test]
 fn test_creation() {

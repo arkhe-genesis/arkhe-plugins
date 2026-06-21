@@ -1,12 +1,12 @@
 //! Cathedral 33T CLI
 
-use cathedral_33t::CathedralConfig;
+use cathedral_arkhe_33t::CathedralConfig;
 use tracing::info;
 
 fn main() -> anyhow::Result<()> {
     tracing_subscriber::fmt::init();
 
-    info!("🏛️ Cathedral ARKHE 33T v{}", cathedral_33t::VERSION);
+    info!("🏛️ Cathedral ARKHE 33T v{}", cathedral_arkhe_33t::VERSION);
     info!("📐 Model: 33T parameters, 33B active");
 
     let config = CathedralConfig::default();
