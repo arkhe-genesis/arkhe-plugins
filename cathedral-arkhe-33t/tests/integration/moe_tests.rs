@@ -1,6 +1,6 @@
-use cathedral_33t::config::MoEConfig;
-use cathedral_33t::moe::MoELayer;
-use cathedral_33t::tensor::Tensor;
+use cathedral_arkhe_33t::config::MoEConfig;
+use cathedral_arkhe_33t::moe::MoELayer;
+use cathedral_arkhe_33t::tensor::Tensor;
 
 #[test]
 fn test_moe_creation() {

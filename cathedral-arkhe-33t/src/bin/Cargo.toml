@@ -1,0 +1,21 @@
+[package]
+name = "cathedral-arkhe-33t-bin"
+version = "4.0.0"
+edition = "2021"
+
+[dependencies]
+cathedral-arkhe-33t = { path = "../.." }
+tracing = "0.1"
+tracing-subscriber = "0.3"
+
+[[bin]]
+name = "train"
+path = "train.rs"
+
+[[bin]]
+name = "infer"
+path = "infer.rs"
+
+[[bin]]
+name = "serve"
+path = "serve.rs"
