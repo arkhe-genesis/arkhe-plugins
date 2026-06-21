@@ -54,8 +54,8 @@ impl FheBridge {
     }
 
     /// Serializa grafo para envio remoto
-    pub fn serialize_graph<T: Serialize>(graph: &T) -> Result<Vec<u8>, bincode::Error> {
-        bincode::serialize(graph)
+    pub fn serialize_graph<T: Serialize + bincode::Encode>(graph: &T) -> Result<Vec<u8>, String> {
+        bincode::encode_to_vec(graph, bincode::config::standard()).map_err(|e| e.to_string())
     }
 
     /// Envia tensor cifrado para computação distribuída
