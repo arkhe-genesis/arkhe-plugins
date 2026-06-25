@@ -1,0 +1,1 @@
+pub struct ReportPhase {} impl ReportPhase { pub fn new() -> Self { Self {} } pub async fn generate(&self, _findings: &[crate::types::Finding]) -> Result<(), crate::mock_deps::ArkheError> { Ok(()) } }
