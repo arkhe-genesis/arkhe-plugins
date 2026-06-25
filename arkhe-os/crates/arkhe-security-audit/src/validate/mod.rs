@@ -1,0 +1,1 @@
+pub struct ValidationPhase {} impl ValidationPhase { pub fn new(_llm: std::sync::Arc<dyn crate::mock_deps::InferenceEngine>) -> Self { Self {} } pub async fn run(&self, findings: Vec<crate::types::Finding>) -> Result<Vec<crate::types::Finding>, crate::mock_deps::ArkheError> { Ok(findings) } }

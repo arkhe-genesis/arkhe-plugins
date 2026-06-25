@@ -1,0 +1,1 @@
+pub struct ReconnaissancePhase {} impl ReconnaissancePhase { pub fn new(_dir: &str, _llm: std::sync::Arc<dyn crate::mock_deps::InferenceEngine>) -> Self { Self {} } pub async fn run(&self) -> Result<String, crate::mock_deps::ArkheError> { Ok(String::new()) } }

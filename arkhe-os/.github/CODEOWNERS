@@ -1,0 +1,6 @@
+# Rotação automática de revisores para evitar familiaridade excessiva
+
+crates/arkhe-core/ @security-team-rotation
+crates/arkhe-pqc/ @crypto-team-rotation
+crates/arkhe-agents/ @agent-team-rotation
+crates/arkhe-llm/ @ai-team-rotation

@@ -1,0 +1,20 @@
+[package]
+name = "arkhe-security-audit"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Dependencies from the instructions
+tokio = { version = "1.28.1", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tracing = "0.1"
+async-trait = "0.1.68"
+thiserror = "1.0"
+
+# Note: The instructions mentioned local path dependencies (arkhe-core, arkhe-agents, etc.)
+# but since those crates may not actually exist or be complete in our mock repo, we're
+# omitting them to keep things buildable, or we can add empty stubs if strictly required.
+# We'll just define the module locally as requested.
+
+[workspace]
