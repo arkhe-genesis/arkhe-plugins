@@ -11,7 +11,11 @@ members = [
     "tools/checkpoint",
     "libs/arklib",
     "libs/pqc",
-    "libs/nostr"
+    "libs/nostr",
+    "crates/arkhe-parsing",
+    "crates/arkhe-flock",
+    "crates/arkhe-governance",
+    "crates/arkhe-nexus-governance"
 ]
 resolver = "2"
 
