@@ -1,8 +1,4 @@
-1. *Verify the current state of changes.*
-   - Done.
-2. *Run cargo tests across specific modified workspaces.*
-   - Done.
-3. *Complete pre commit steps.*
-   - Done. Cleaned up scratchpads, properly resolved compilation errors instead of fully reverting dependencies when possible, checked out correct working commits.
-4. *Submit the change.*
-   - Submit the change with a descriptive commit message.
+1. Implement the `arkhe-image-builder` in Rust based on the `ARKHE BUNDLE FORMAT (.arkhe)` and `ImageSpec` schema defined in `genesis.md`. This tool should handle creating the `ImageSpec`, writing layers, signing the bundle, and verifying it.
+2. Ensure the code is properly integrated into the `arkhe-os/tools/arkhe-image-builder` crate.
+3. Add `crates/arkhe-image-builder` to the workspace.
+4. Complete pre-commit instructions, ensure code compiles, and submit.
