@@ -1,5 +1,5 @@
-#![no_std]
-#![no_main]
+#![cfg_attr(not(test), no_std)]
+#![cfg_attr(not(test), no_main)]
 
 mod memory;
 mod scheduler;
@@ -11,6 +11,7 @@ mod temporal;
 use core::panic::PanicInfo;
 
 #[no_mangle]
+#[cfg(not(test))]
 pub extern "C" fn _start() -> ! {
     // Inicializar o kernel
 
@@ -36,7 +37,11 @@ pub extern "C" fn _start() -> ! {
     loop {}
 }
 
+#[cfg(not(test))]
 #[panic_handler]
 fn panic(_info: &PanicInfo) -> ! {
     loop {}
 }
+
+#[cfg(test)]
+fn main() {}
